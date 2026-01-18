@@ -52,13 +52,24 @@
     h2{font-size:28px;margin:0 0 14px}
     .muted{color:var(--muted)}
     .grid{display:grid;gap:20px}
-    .cards{display:grid;gap:16px}
-    @media(min-width:900px){.grid{grid-template-columns:1.2fr .8fr}.cards{grid-template-columns:repeat(3,1fr)}}
+    
+    
     .card{background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid var(--border)}
     ul{margin:10px 0 0;padding-left:18px}
     li{margin:6px 0;color:var(--muted)}
     footer{border-top:1px solid var(--border);padding:22px 0;text-align:center;color:var(--muted);font-size:13px}
     .float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;gap:10px;flex-direction:column}
+    .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  
+}
   </style>
 </head>
 <body>
