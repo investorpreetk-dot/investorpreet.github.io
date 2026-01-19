@@ -90,7 +90,22 @@
     .next-batch strong{color:var(--text)}
 
     .float{position:fixed; right:16px; bottom:16px; z-index:50; display:flex; flex-direction:column; gap:10px;}
-    .float .btn{padding:10px 12px; border-radius:12px}
+   .float .btn{
+  padding:10px 12px;
+  border-radius:12px;
+  background: transparent;        /* don't force dark background */
+  border:1px solid var(--border);
+  color:var(--text);
+}
+
+/* Make FLOAT CTAs pink (same as the main pink buttons) */
+.float .btn.primary{
+  border:none;
+  background: linear-gradient(135deg, #ffb199, #ff6fae);
+  color:#12081a;
+  font-weight:800;
+  box-shadow: 0 10px 24px rgba(255, 122, 162, .35);
+}
 
     /* Offers grid */
     .cards{display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; align-items:stretch;}
@@ -143,8 +158,8 @@
   <div class="float">
     <a class="btn primary" target="_blank" rel="noopener"
        href="https://wa.me/12045090833?text=Hi%20Investor%20Preet%2C%20I%20have%20a%20question.">WhatsApp</a>
-    <a class="btn" target="_blank" rel="noopener" href="https://discord.gg/PHqsm4j2eG">Discord</a>
-    <a class="btn" href="mailto:investorpreetk@gmail.com">Email</a>
+    <a class="btn primary" target="_blank" rel="noopener" href="https://discord.gg/PHqsm4j2eG">Discord</a>
+    <a class="btn primary" href="mailto:investorpreetk@gmail.com">Email</a>
   </div>
 
   <main>
