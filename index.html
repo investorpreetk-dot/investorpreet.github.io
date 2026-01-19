@@ -38,7 +38,36 @@
       padding:11px 14px; border-radius:12px; border:1px solid var(--border);
       background:rgba(255,255,255,.03); color:var(--text); font-weight:650;
       cursor:pointer; transition:transform .08s ease, background .15s ease;}
-    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.06)}
+    /* CTA GLOW – applies to ALL buttons */
+.btn{
+  box-shadow: 0 0 0 rgba(255,185,153,0);
+  transition: 
+    transform .15s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+/* Hover / Tap glow */
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 18px rgba(255,185,153,.45),
+    0 0 36px rgba(255,122,162,.35);
+  background: rgba(255,255,255,.08);
+}
+
+/* Subtle pulse for attention (top + side CTAs) */
+@keyframes glowPulse {
+  0%   { box-shadow: 0 0 12px rgba(255,185,153,.35); }
+  50%  { box-shadow: 0 0 26px rgba(255,122,162,.55); }
+  100% { box-shadow: 0 0 12px rgba(255,185,153,.35); }
+}
+
+/* Pulse on ALL CTAs */
+    .btn{
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
     .btn.primary{border:none; background: linear-gradient(135deg, #ffb199, #ff6fae); color:#12081a; font-weight:800;}
 
     h1{font-size:42px;margin:0 0 12px}
